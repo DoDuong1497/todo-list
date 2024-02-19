@@ -1,0 +1,147 @@
+body {
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h6 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.todo {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafc;
+}
+
+.todo-main {
+  width: 50%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #e1e5ee;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-add {
+  margin-bottom: 20px;
+}
+
+.todo-add form {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.todo-add .task-input {
+  flex-grow: 1;
+  box-shadow: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #e1e5ee;
+}
+
+.todo-add .btn-add {
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #0d6efd;
+}
+
+.todo-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid #e1e5ee;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.todo-list ul li:last-child {
+  margin-bottom: 0;
+}
+
+.todo-list ul li.checked {
+  opacity: 0.5;
+}
+
+.todo-list .todo-list__content,
+.todo-list .todo-list__control {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.todo-list__checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid #e1e5ee;
+  position: relative;
+}
+
+.todo-list li.checked .todo-list__checkbox::before {
+  content: '';
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border-bottom: solid 2px #000;
+  border-left: solid 2px #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.todo-list__content h6 {
+  margin-bottom: 5px;
+}
+
+.todo-list__date {
+  font-size: 13px;
+}
+
+.todo-list__control button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* .todo-list__control button.btn-edit {
+  background-color: #ffca2c;
+} */
+
+.todo-list__control button.btn-delete {
+  background-color: #dc3545;
+}
