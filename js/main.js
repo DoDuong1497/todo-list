@@ -48,16 +48,18 @@ let formTask = document.querySelector('.todo-add form');
 formTask.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  let valueInputTaskName = document.querySelector('.task-input').value;
+  let valueInputTaskName = document.getElementById('taskName').value;
 
   let newDataTaskItem = {
-    id: Math.round(Math.random * 100),
+    id: Math.round(Math.random() * 100),
     title: valueInputTaskName,
     date: new Date().toLocaleDateString(),
   };
 
   let newDataTask = [...dataTask, newDataTaskItem];
-  dataTask.push(newDataTask);
+
+  dataTask.push(newDataTaskItem);
+
   renderListTask(newDataTask);
 });
 
