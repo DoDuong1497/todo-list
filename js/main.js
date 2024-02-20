@@ -16,11 +16,14 @@
 //   },
 // ];
 
-let dataLocal = JSON.parse(localStorage.getItem('data'));
+let dataLocal = JSON.parse(localStorage.getItem('data')) || [];
+
+// if (dataLocal === null) dataLocal = [];
+
 let toDoList = document.querySelector('.todo-list ul');
 
 function renderListTask(data) {
-  toDoList.innerHTML = '';
+  if (data.length === 0) toDoList.innerHTML = 'Không có task';
 
   data.forEach((element) => {
     toDoList.innerHTML += `
@@ -39,7 +42,7 @@ function renderListTask(data) {
         </div>
       </li>
     `;
-  });
+  }, []);
 }
 
 renderListTask(dataLocal);
