@@ -23,7 +23,7 @@ let dataLocal = JSON.parse(localStorage.getItem('data')) || [];
 let toDoList = document.querySelector('.todo-list ul');
 
 function renderListTask(data) {
-  if (data.length === 0) toDoList.innerHTML = 'Không có task';
+  toDoList.innerHTML = '';
 
   data.forEach((element) => {
     toDoList.innerHTML += `
