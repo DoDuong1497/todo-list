@@ -37,7 +37,7 @@ function renderListTask(data) {
         </div>
         <div class="todo-list__control">
           <button type="button" class="btn-delete" onclick="deleteTaskItem(${element.id})">
-            <i class="fa-solid fa-trash"></i>
+            <i class='bx bxs-trash-alt'></i>
           </button>
         </div>
       </li>
