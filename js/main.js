@@ -42,7 +42,7 @@ function renderListTask(data) {
         </div>
       </li>
     `;
-  }, []);
+  });
 }
 
 renderListTask(dataLocal);
