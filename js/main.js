@@ -1,24 +1,4 @@
-// let dataTask = [
-//   {
-//     id: Math.round(Math.random() * 100),
-//     title: 'Lorem ipsum dolor sit amet',
-//     date: new Date().toLocaleDateString(),
-//   },
-//   {
-//     id: Math.round(Math.random() * 100),
-//     title: 'Lorem ipsum dolor sit amet 3',
-//     date: new Date().toLocaleDateString(),
-//   },
-//   {
-//     id: Math.round(Math.random() * 100),
-//     title: 'Lorem ipsum dolor sit amet 2',
-//     date: new Date().toLocaleDateString(),
-//   },
-// ];
-
 let dataLocal = JSON.parse(localStorage.getItem('data')) || [];
-
-// if (dataLocal === null) dataLocal = [];
 
 let toDoList = document.querySelector('.todo-list ul');
 
@@ -79,15 +59,6 @@ function deleteTaskItem(taskId) {
 
   renderListTask(dataLocal);
 }
-
-// let checkbox = document.querySelectorAll('.todo-list__checkbox');
-
-// checkbox.forEach((ele) => {
-//   ele.addEventListener('click', (e) => {
-//     let taskItem = e.target.parentNode.parentElement;
-//     taskItem.classList.toggle('checked');
-//   });
-// });
 
 toDoList.addEventListener('click', (e) => {
   if (e.target.classList.contains('todo-list__checkbox')) {

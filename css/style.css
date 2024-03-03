@@ -91,10 +91,6 @@ p {
   margin-bottom: 0;
 }
 
-.todo-list ul li.checked {
-  opacity: 0.5;
-}
-
 .todo-list .todo-list__content,
 .todo-list .todo-list__control {
   display: flex;
@@ -131,16 +127,17 @@ p {
   font-size: 13px;
 }
 
+.todo-list li.checked .todo-list__content h6,
+.todo-list li.checked .todo-list__date {
+  opacity: 0.5;
+}
+
 .todo-list__control button {
   width: 40px;
   height: 40px;
   border-radius: 5px;
   color: #fff;
 }
-
-/* .todo-list__control button.btn-edit {
-  background-color: #ffca2c;
-} */
 
 .todo-list__control button.btn-delete {
   background-color: #dc3545;
